@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="pavadol dhechasidphaisan">
+    <title>
+        
+        Intake the data for further develop
+
+    </title>
+
+</head>
+
+    <style>
+
+        /*doing the color and font  overall */
+
+            body {
+                    background-color:rgb(230, 132, 52);
+                    font-family: Verdana;
+                    font-weight: 400;
+                    text-align: center;
+                    line-height: 1.4;
+                    color: var(--color-blue); }
+                    
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: var(--color-orange);
+            background-image: linear-gradient(
+                115deg,
+                rgba(206, 169, 100, 0.8),
+                rgba(233, 148, 21, 0.678)
+            ),
+            url(https://upload.wikimedia.org/wikipedia/commons/2/2c/Thanon_Liang_Mueang_Nonthaburi.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+
+
+            
+        }
+
+
+            
+        /* color shadowing */
+            form {
+                    background-color: rgb(255, 123, 0);
+                    max-width: 500px;
+                    margin: 50px auto;
+                    padding: 30px 20px;
+                    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+            }
+                .form-control {
+                            text-align: left;
+                            margin-bottom: 25px;     
+
+             }       
+              /*label*/
+                .form-control label {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+
+
+                    /*form control input*/
+                .form-control input,
+                .form-control select,
+                .form-control textarea {
+                    border: 1px solid #777;
+                    border-radius: 2px;
+                    font-family: inherit;
+                    padding: 10px;
+                    display: block;
+                    width: 95%;
+                
+            
+                }
+            /*style form radio control?         button checkbox*/
+                .form-control input[type="radio"],
+                .form-control input[type="checkbox"] {
+                        display: inline-block;
+                        width: auto;
+                }
+                /*styling button*/
+                button {
+                    background-color: #f1a42f;
+                    border: 2px solid rgb(48, 45, 45);
+                    border-radius: 2px;
+                    font-family:inherit;
+                    font-size: 22px;
+                    display: block;
+                    width: 100%;
+                    margin-top: 50px;
+                    margin-bottom: 20px;
+
+
+                }
+        </style>
+
+    </head>
+
+    <body>
+            <h2>  คำนวณ % ความเสี่ยงในการติดโควิด บริเวณจังหวัด นนทบุรี  </h2>
+
+            <!-- finnally doing the form -->
+            <form id="form">
+                
+            <!--detailing -->
+           
+            <div class="form-control">
+                <label for="name"  id="label-name">
+                    <b>  Name </b>
+                </label>
+           
+                <!--input name -->
+                
+                <input type="text"
+                        id="name"
+                        placeholder="Key your name in." />
+                        
+
+            </div>
+            
+            <div class="form-control">
+                <label for="gender" id="label-gender">
+                    <b>  Gender </b>
+                </label>
+
+                <input type="text"
+                        id="gender"
+                        placeholder="Enter your gender." 
+                        required/>
+
+
+                
+
+            </div>
+
+            <div class="form-control">
+                <label for="age"  id="label-age">
+                    <b>   Age </b>
+                </label>
+                    <input type="text"
+                          id="age"
+                          placeholder="Enter your ages"
+                          required />
+
+            </div>
+                <div class="form-control">
+                    <label for="province">
+                      <b>  Province </b>
+                    </label>
+                    
+                    <label for="province-1">
+                        <input type="radio"
+                                id="province"
+                                name="province"
+                                required>
+                            Nonthaburi 
+                         </input>
+                    </label>
+                
+                </div>
+            
+            <div class="form-control">
+                <label>
+                  <b>  district you frequently visit. </b>
+                           
+                </label>
+                <label for="fvinp1">
+                        <input type="checkbox"
+                        name="fvinp1"
+                        value="121"
+                        id="fvinp1"
+                        class="checks"
+                        > Mueang Nonthaburi
+
+                </label>
+                <label for="fvinp-2">
+                        <input type="checkbox"
+                        name="fvinp-2"
+                        class="checks"
+                        value="11">Sai Noi
+                </label>
+
+                <label>
+                    <label for="fvinp-3">
+                        <input type="checkbox"
+                        name="fvinp-3"
+                        class="checks"
+                        value="33">Bang Yai
+
+                    </label>
+                <label>
+                    <label for="fvinp-4">
+                     <input type="checkbox"
+                        name="fvinp-4"
+                        class="checks"
+                        value="53">Bang Kruai
+
+                    </label>
+                <label>
+                    <label for="fvinp-5">
+                        <input type="checkbox"
+                            name="fvinp-5"
+                            class="checks"
+                            value="56">Bang Bua Thong
+
+
+                    </label>
+
+                <label>
+                    <label for="fvinp-6">
+                        <input type="checkbox"
+                            name="fvinp-6"
+                            class="checks"
+                            value="90">Pak Kret
+                        
+                    </label>
+            
+                
+
+            </div>
+               
+            <div class="form-control">
+                <label for="profession" id="profession">
+                    
+                        <b>Profession</b>
+
+                </label>
+                
+                <!--option for Profession-->
+                <select name="profession"  id="profession" required >
+                        
+                        <option disabled selected value>choose profession</option>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="merchant">Merchant</option>
+                        <option value="bus">Bus driver</option>
+                        <option value="vendor">Street vendor</option>
+                        <option value="parttime">Part Timer</option>
+                </select>
+               
+                <br>
+                
+                <div class="form-control">
+                    <label>
+                      <b>  district you lives in. </b>
+                               
+                    </label>
+                    <label for="linp-1">
+                            <input type="radio"
+                            id="linp-1"
+                            value="มีความเสี่ยง 33%"
+                            name="linp"
+                            > Mueang Nonthaburi </input>
+    
+                    </label>
+                    <label for="linp-2">
+                            <input type="radio"
+                            id="linp-2"
+                            value="มีความเสี่ยง 3%"
+                            name="linp">Sai Noi </input>
+                    </label>
+    
+                    <label>
+                        <label for="linp-3">
+                            <input type="radio"
+                            id="linp-3"
+                            value="มีความเสี่ยง 9%"
+                            name="linp">Bang Yai </input>
+    
+                        </label>
+                    <label>
+                        <label for="linp-4">
+                         <input type="radio"
+                            id="linp-4"
+                            value="มีความเสี่ยง 14%"
+                            name="linp">Bang Kruai </input>
+    
+                        </label>
+                    <label>
+                        <label for="linp-5">
+                            <input type="radio"
+                                id="linp-5"
+                                value="มีความเสี่ยง 16%"
+                                name="linp">Bang Bua Thong </input>
+    
+    
+                        </label>
+    
+                    <label>
+                        <label for="linp-6">
+                            <input type="radio"
+                                id="linp-6"
+                                value="มีความเสี่ยง 25%"
+                                name="linp">Pak Kret </input>
+                            
+                        </label>
+                
+                   
+    
+                </div>
+                
+                <button type="submit" onclick="twax()" >
+                    Submit
+                </button>
+
+               
+
+        
+            
+            
+
+            </form>
+            <script>
+              function twax() {
+                  var radios = document.getElementsByName("linp");
+                  
+                  for (var i = 0; i < radios.length; i++) {
+                      if (radios[i].checked);
+                        alert(radios[i].value);
+                        
+                        break;
+                  }
+              }
+              
+              
+
+
+
+
+
+
+
+            </script>
+    </body>
+
+   
+
+
+</html>
