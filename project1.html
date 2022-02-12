@@ -11,6 +11,14 @@
 
     </title>
 
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    
 </head>
 
     <style>
@@ -312,7 +320,12 @@
                 </div>
                 
                 <button type="submit" onclick="twax()" >
+                   
+                    
                     Submit
+                    
+                    
+
                 </button>
 
                
@@ -328,7 +341,7 @@
                   
                   for (var i = 0; i < radios.length; i++) {
                       if (radios[i].checked);
-                        alert(radios[i].value);
+                       Swal.fire(radios[i].value);
                         
                         break;
                   }
