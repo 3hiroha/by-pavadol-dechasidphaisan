@@ -311,7 +311,7 @@
     
                 </div>
                 
-                <button type="submit" onclick="twax()" >
+                <button type="submit" onclick="test()" value="find" />
                     Submit
                 </button>
 
@@ -323,24 +323,21 @@
 
             </form>
             <script>
-              function twax() {
-                  var radios = document.getElementsByName("linp");
-                  
-                  for (var i = 0; i < radios.length; i++) {
-                      if (radios[i].checked);
-                        alert(radios[i].value);
-                        
-                        break;
-                  }
-              }
-              
-              
-
-
-
-
-
-
+            function test() {
+    var radios = document.getElementsByName("linp");
+    var found = 1;
+    for (var i = 0; i < radios.length; i++) {       
+        if (radios[i].checked) {
+            alert(radios[i].value);
+            found = 0;
+            break;
+        }
+    }
+    if(found == 1)
+    {
+    alert("Please Select district to get the risk calulate done");
+    }    
+}
 
             </script>
     </body>
